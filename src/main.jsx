@@ -6,8 +6,8 @@ import About from "./pages/about.jsx";
 import Projects from "./pages/projects.jsx";
 import Contact from "./pages/contact.jsx";
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <Routes>
+  <BrowserRouter basename="/my-portfolio">
+    <Routes >
       <Route path="/my-portfolio/" element={<Home />} />
     </Routes>
 
