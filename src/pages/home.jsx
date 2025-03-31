@@ -36,13 +36,13 @@ export default function Home() {
       {/* //! end navbar section */}
 
       {/* //! start hero section */}
-      <main className="flex flex-wrap pt-52 ">
+      <main className="flex flex-wrap pt-52">
         <div className="w-full lg:w-1/2 p-5 ">
           <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-primary from-20% to-white to-60% text-4xl font-bold capitalize animate__animated animate__fadeInLeft">
-            hi, it`&apos;`s mohamed
+            hi, it's mohamed
           </h1>
           <h3 className="text-2xl font-medium py-2  animate__animated animate__fadeInRight">
-            I`&apos;`m a <span className="text-primary " ref={el} />
+            I'm a <span className="text-primary " ref={el} />
           </h3>
           <p className="text-gray-300 animate__animated animate__fadeInLeft">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
@@ -54,22 +54,22 @@ export default function Home() {
           {/* //? social media buttons */}
           <div className="py-7 flex animate__animated animate__fadeInUp">
             <div className={socialMediaButtonsStyle}>
-              <a href="#">
+              <a href="https://www.linkedin.com/in/mohamed-alakhaly-23a25a284/">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </div>
             <div className={socialMediaButtonsStyle}>
-              <a href="#">
+              <a href="https://github.com/MohamedAlakhaly">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
             </div>
             <div className={socialMediaButtonsStyle}>
-              <a href="#">
+              <a href="https://www.facebook.com/profile.php?id=100022101017721">
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
             </div>
             <div className={socialMediaButtonsStyle}>
-              <a href="#">
+              <a href="https://www.instagram.com/_mohamed_toto_/">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </div>
@@ -82,11 +82,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="lg:p-0 p-10 lg:w-1/2 animate__animated animate__fadeInDown">
+        <div className="lg:p-0 p-10 md:w-full lg:w-1/2 animate__animated animate__fadeInDown">
           <img
             src={img1}
             alt=""
-            className="lg:w-96 place-self-center bg-primary rounded-full shadow-primary shadow-3xl animate__animated animate__pulse animate__infinite animate__slower"
+            className="md:w-96  lg:w-96 place-self-center bg-primary rounded-full shadow-primary shadow-3xl animate__animated animate__pulse animate__infinite animate__slower"
           />
         </div>
       </main>

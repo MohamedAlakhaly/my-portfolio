@@ -4,6 +4,7 @@ import Home from "./pages/home.jsx";
 import Services from "./pages/services.jsx";
 import About from "./pages/about.jsx";
 import Projects from "./pages/projects.jsx";
+import ProjectsDetails from "./pages/projects_details";
 import Contact from "./pages/contact.jsx";
 createRoot(document.getElementById("root")).render(
   <BrowserRouter >
@@ -22,6 +23,10 @@ createRoot(document.getElementById("root")).render(
 
     <Routes>
       <Route path="/my-portfolio/projects" element={<Projects />} />
+    </Routes>
+
+    <Routes>
+      <Route path="/my-portfolio/projects/:id" element={<ProjectsDetails />} />
     </Routes>
 
     <Routes>

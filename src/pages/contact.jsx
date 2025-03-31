@@ -20,7 +20,7 @@ export default function Contact() {
       <div className="p-3 md:flex pt-24">
         <div className="bg-zinc-800 md:w-2/3 p-6 rounded-lg">
           <h1 className="text-3xl text-primary animate__animated animate__fadeInDown">
-            Let`&apos;`s work together
+            Let's work together
           </h1>
           <p className="text-slate-300 py-7 animate__animated animate__fadeInLeft">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil

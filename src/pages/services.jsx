@@ -14,8 +14,8 @@ export default function Services() {
     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia nulla similique nihil nisi optio doloremque fuga, harum doloribus voluptatem reprehenderit ipsam esse ";
   return (
     <div className="h-screen container mx-auto relative ">
-      <div className="w-80 h-80 bg-primary rounded-full absolute bottom-1/2 left-1/5 blur-3xl" />
-      <div className="w-80 h-80 bg-primary rounded-full absolute top-2/4 right-1/4 blur-3xl" />
+      {/* <div className="w-80 h-80 bg-primary rounded-full absolute bottom-1/2 left-1/5 blur-3xl" /> */}
+      {/* <div className="w-80 h-80 bg-primary rounded-full absolute top-2/4 right-1/4 blur-3xl" /> */}
       {/*//! start navbar section */}
       <Navbar />
       {/*//! end navbar section */}
