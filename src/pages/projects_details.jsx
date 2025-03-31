@@ -11,6 +11,7 @@ import ECommerceImg4 from "../assets/my_projects/e-commerce/4.png";
 import ECommerceImg5 from "../assets/my_projects/e-commerce/5.png";
 import LiveStreamImg1 from "../assets/my_projects/live_stream/1.png";
 import MyPortfolioImg1 from "../assets/my_projects/my_portfolio/1.png";
+import PortfolioImg from "../assets/my_projects/portfolio/1.png";
 export default function ProjectsDetails() {
   const loremText =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sit cum explicabo voluptate tenetur libero facere quam. Eligendi est omnis numquam tempora. Deleniti facilis inventore ipsam minus eius temporibus explicabo";
@@ -51,6 +52,16 @@ export default function ProjectsDetails() {
       github: "https://github.com/MohamedAlakhaly",
       liveDemo: "https://mohamedalakhaly.github.io/my-portfolio/",
       images: [MyPortfolioImg1]
+    },
+    {
+      id: "4",
+      title: "Portfolio Project",
+      description:
+        "This website is a personal project. It is an interactive gaming website that aims to provide a fun and simple experience for users. The website features an attractive and easy-to-use design, with a focus on creating an interactive and engaging user interface.",
+      technologies: ["Html", "Css", "JavaScript", "Bootstrap"],
+      github: "https://github.com/MohamedAlakhaly",
+      liveDemo: "https://mohamedalakhaly.github.io/web-portfolio/",
+      images: [PortfolioImg]
     }
   ];
 
