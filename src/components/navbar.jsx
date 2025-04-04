@@ -16,39 +16,44 @@ export default function Navbar() {
         </div>
 
         <div
-        className={`${navState == "close"
-          ? "hidden"
-          : ""} w-full h-96 md:hidden mt-2 duration-300`}
-      >
-        <ul className="h-96 flex flex-col justify-around items-center">
-          <li>
-            <a href="/my-portfolio/" className={navItemsStyle}>
-              home
-            </a>
-          </li>
-          <li>
-            <a href="/my-portfolio/services" className={navItemsStyle}>
-              services
-            </a>
-          </li>
-          <li>
-            <a href="/my-portfolio/about" className={navItemsStyle}>
-              about
-            </a>
-          </li>
-          <li>
-            <a href="/my-portfolio/projects" className={navItemsStyle}>
-              projects
-            </a>
-          </li>
-          <li>
-            <a href="/my-portfolio/contact" className={navItemsStyle}>
-              contact
-            </a>
-          </li>
-        </ul>
-      </div>
-      
+          className={`${navState == "close"
+            ? "hidden"
+            : ""} w-full h-96 md:hidden mt-2 duration-300`}
+        >
+          <ul className="h-96 flex flex-col justify-around items-center">
+            <li>
+              <a href="/my-portfolio/" className={navItemsStyle}>
+                home
+              </a>
+            </li>
+            <li>
+              <a href="/my-portfolio/services" className={navItemsStyle}>
+                services
+              </a>
+            </li>
+            <li>
+              <a href="/my-portfolio/about" className={navItemsStyle}>
+                about
+              </a>
+            </li>
+            <li>
+              <a href="/my-portfolio/certifications" className={navItemsStyle}>
+                Certifications
+              </a>
+            </li>
+            <li>
+              <a href="/my-portfolio/projects" className={navItemsStyle}>
+                projects
+              </a>
+            </li>
+            <li>
+              <a href="/my-portfolio/contact" className={navItemsStyle}>
+                contact
+              </a>
+            </li>
+          </ul>
+        </div>
+
         <FontAwesomeIcon
           icon={faBars}
           onClick={() => {
@@ -97,6 +102,11 @@ export default function Navbar() {
               </a>
             </li>
             <li>
+            <a href="/my-portfolio/certifications" className={navItemsStyle}>
+            Certifications
+            </a>
+          </li>
+            <li>
               <a
                 href="/my-portfolio/projects"
                 className={navItemsStyle}
@@ -117,40 +127,6 @@ export default function Navbar() {
           </ul>
         </div>
       </nav>
-{/* 
-      <div
-        className={`${navState == "close"
-          ? "hidden"
-          : ""} w-full h-96 md:hidden mt-20 fixed z-10 backdrop-blur-lg`}
-      >
-        <ul className="h-96 flex flex-col justify-around items-center">
-          <li>
-            <a href="/my-portfolio/" className={navItemsStyle}>
-              home
-            </a>
-          </li>
-          <li>
-            <a href="/my-portfolio/services" className={navItemsStyle}>
-              services
-            </a>
-          </li>
-          <li>
-            <a href="/my-portfolio/about" className={navItemsStyle}>
-              about
-            </a>
-          </li>
-          <li>
-            <a href="/my-portfolio/projects" className={navItemsStyle}>
-              projects
-            </a>
-          </li>
-          <li>
-            <a href="/my-portfolio/contact" className={navItemsStyle}>
-              contact
-            </a>
-          </li>
-        </ul>
-      </div> */}
     </div>
   );
 }

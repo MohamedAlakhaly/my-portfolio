@@ -11,27 +11,32 @@ export default function Projects() {
       id: "1",
       title: "E-commerce app",
       image: ECommerceProject,
-      hoverColor:'from-violet-500',
+      hoverColor: "from-violet-500"
     },
     {
       id: "2",
       title: "Live Streamer Web",
-      image:LiveStreamProject,
-        hoverColor:'from-pink-500',
+      image: LiveStreamProject,
+      hoverColor: "from-pink-500"
     },
     {
       id: "3",
       title: "My Portfolio",
-      image:MyPortfolioProject,
-        hoverColor:'from-primary',
+      image: MyPortfolioProject,
+      hoverColor: "from-primary"
     },
     {
       id: "4",
       title: "Portfolio Web",
-      image:PortfolioProject,
-        hoverColor:'from-yellow-400',
+      image: PortfolioProject,
+      hoverColor: "from-yellow-400"
+    },
+    {
+      id: "5",
+      title: "restaurant app",
+      image: PortfolioProject,
+      hoverColor: "from-green-500"
     }
-    
   ];
   return (
     <div className="h-screen container mx-auto relative">
