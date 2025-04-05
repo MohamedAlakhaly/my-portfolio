@@ -1,42 +1,103 @@
-import Navbar from '../components/navbar'
-import testImg from '../assets/certifications/dart.png'
-import { useState } from "react";
-// import { Card, CardContent } from "@/components/ui/card";
-// import { Button } from "@/components/ui/button";
-// import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import Navbar from "../components/navbar";
+import testImg from "../assets/certifications/dart.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 export default function Certifications() {
-  const certifications = [
-    {
-      id: 1,
-      title: "Getting Started with Flutter Development",
-      issuer: "Google Cloud & Coursera",
-      date: "Feb 6, 2024",
-      image: testImg,
-      verifyLink: "https://coursera.org/verify/XYZ123",
-    },
-    {
-      id: 2,
-      title: "Full-Stack Web Development",
-      issuer: "Udemy",
-      date: "Jan 15, 2023",
-      image: testImg,
-      verifyLink: "https://udemy.com/certificate/ABC456",
-    },
+  // const certifications = [
+  //   {
+  //     id: 1,
+  //     title: "Getting Started with Flutter Development",
+  //     issuer: "Google Cloud & Coursera",
+  //     date: "Feb 6, 2024",
+  //     image: testImg,
+  //     verifyLink: "https://coursera.org/verify/XYZ123",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Full-Stack Web Development",
+  //     issuer: "Udemy",
+  //     date: "Jan 15, 2023",
+  //     image: testImg,
+  //     verifyLink: "https://udemy.com/certificate/ABC456",
+  //   },
 
-  ];
-  const [selectedCert, setSelectedCert] = useState(null);
+  // ];
   return (
-    // <div className='h-screen container mx-auto'>
-    //   <Navbar/>
-      
-    //   <div className='flex flex-wrap pt-44'>
-    //   <div className='md:w-1/2'>Here details</div>
-    //   <div className='md:w-1/2'>
-    //     <img src={testImg} alt="Certifications image" />
-    //   </div>
-    //   </div>
-    // </div>
-    <div className="h-screen bg-black text-white p-10">
+    <div className="h-screen container  mx-auto">
+      <Navbar />
+
+      <div className=" pt-24 p-5">
+        <div className="flex p-5 rounded-xl bg-zinc-800 flex-wrap">
+          <div className="md:w-1/2 rounded-xl w-full ">
+            <div className="flex items-center">
+              <p className="text-lg">Certificate details</p>
+              <div className="bg-primary h-1 mx-4 rounded-full w-1/2" />
+            </div>
+            <div>
+              <br />
+              <div className="flex">
+                <p className="lg:text-xl text-base text-primary font-semibold">
+                  Certificate Title
+                </p>
+                <p className="lg:text-xl text-base px-3 font-semibold">
+                  Getting started with flutter
+                </p>
+              </div>
+              <br />
+              <div className="flex">
+                <p className="lg:text-xl text-base text-primary font-semibold">
+                  Issued by
+                </p>
+                <p className="lg:text-xl text-base px-3 font-semibold">
+                  Google cloud & coursera
+                </p>
+              </div>
+              <br />
+              <div className="flex">
+                <p className="lg:text-xl text-base text-primary font-semibold">
+                  Issued on
+                </p>
+                <p className="lg:text-xl text-base px-3 font-semibold">Feb 6, 2024</p>
+              </div>
+              <br />
+              <div className="flex items-center">
+                <div className="bg-primary h-1 rounded-full w-1/2" />
+                <p className="text-lg mx-4"></p>
+              </div>
+            </div>
+          </div>
+          <div className="md:w-1/2">
+            <img
+              src={testImg}
+              className="shadow-3md mt-5 shadow-primary "
+              alt="Certifications image"
+            />
+            <div className="flex justify-end mt-7 ">
+              <div className="bg-primary rounded-md p-2 hover:scale-105 duration-300 hover:cursor-pointer">
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  className="text-2xl text-black rotate-180"
+                />
+              </div>
+
+              <div className="bg-primary rounded-md p-2 mx-4 hover:scale-105 duration-300 hover:cursor-pointer">
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  className="text-2xl text-black"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+// import { useState } from "react";
+// const [selectedCert, setSelectedCert] = useState(null);
+
+{
+  /* <div className="h-screen bg-black text-white p-10">
       <Navbar/>
     <h1 className="text-3xl font-bold pt-28 text-center text-cyan-400 mb-6">
       Certifications
@@ -86,8 +147,5 @@ export default function Certifications() {
         </div>
       </div>
     )}
-  </div>
-
-  )
+  </div> */
 }
-
