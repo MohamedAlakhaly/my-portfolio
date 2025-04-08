@@ -87,36 +87,36 @@ export default function ProjectsDetails() {
       <div className="flex flex-wrap pt-52">
         <div className="w-full lg:w-1/2 p-5">
           <br />
-          <div className="text-3xl font-semibold">
+          <div className="text-3xl font-semibold animate__animated animate__fadeInDown">
             {project.title}
           </div>
           <br />
-          <div className="text-zinc-400 description">
+          <div className="text-zinc-400 description animate__animated animate__fadeInLeft">
             {project.description}
           </div>
           <br />
-          <div className="text-primary text-lg font-light space-x-4">
+          <div className="text-primary text-lg font-light space-x-4 animate__animated animate__fadeInUp">
             {project.technologies.map((tech, index) =>
               <span>
                 {tech}
               </span>
             )}
           </div>
-          <div className="bg-gray-600 [padding:0.5px] my-2" />
+          <div className="bg-gray-600 [padding:0.5px] my-2 animate__animated animate__fadeIn" />
 
           <a
             href={project.liveDemo}
-            className="bg-zinc-800 p-3 inline-flex rounded-full group "
+            className="bg-zinc-800 p-3 inline-flex rounded-full group animate__animated animate__fadeInLeft"
           >
             <FontAwesomeIcon
               icon={faArrowRight}
-              className="text-2xl group-hover:scale-110 group-hover:-rotate-45 duration-100 group-hover:text-primary"
+              className="text-2xl group-hover:scale-110 group-hover:-rotate-45 duration-100 group-hover:text-primary "
             />
           </a>
 
           <a
             href={project.github}
-            className="bg-zinc-800 p-3 inline-flex rounded-full m-2 group"
+            className="bg-zinc-800 p-3 inline-flex rounded-full m-2 group animate__animated animate__fadeInRight"
           >
             <FontAwesomeIcon
               icon={faGithub}
@@ -129,11 +129,11 @@ export default function ProjectsDetails() {
           <img
             src={project.images[currentImage]}
             alt="project photos"
-            className="w-full h-96 object-cover"
+            className="w-full h-96 object-cover animate__animated animate__fadeIn shadow-3md"
           />
           <div className="flex justify-end mt-7">
             <div
-              className="bg-primary rounded-md p-2 hover:scale-105 duration-300"
+              className="bg-primary rounded-md p-2 hover:scale-105 duration-300 animate__animated animate__fadeInLeft"
               onClick={prevImage}
             >
               <FontAwesomeIcon
@@ -143,7 +143,7 @@ export default function ProjectsDetails() {
             </div>
 
             <div
-              className="bg-primary rounded-md p-2 mx-4 hover:scale-105 duration-300"
+              className="bg-primary rounded-md p-2 mx-4 hover:scale-105 duration-300 animate__animated animate__fadeInRight"
               onClick={nextImage}
             >
               <FontAwesomeIcon

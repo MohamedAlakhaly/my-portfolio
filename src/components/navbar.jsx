@@ -9,7 +9,7 @@ export default function Navbar() {
     <div className="">
       <nav className="md:flex md:justify-between py-6 animate__animated animate__fadeInDown fixed w-full z-10 top-0 left-0  backdrop-blur-lg">
         <div className="text-2xl font-bold cursor-pointer ml-3">
-          <a href="#">
+          <a href="/my-portfolio/">
             <span className="hidden md:inline">Mohamed </span>
             <span className="text-primary ">Al-Akhaly</span>
           </a>

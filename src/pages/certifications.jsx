@@ -1,91 +1,117 @@
+import { useState } from "react";
 import Navbar from "../components/navbar";
 import testImg from "../assets/certifications/dart.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import CustomButton from "../components/custom_download_button";
+import CustomShowCertificationButton from "../components/custom_show_certification";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-export default function Certifications() {
-  // const certifications = [
-  //   {
-  //     id: 1,
-  //     title: "Getting Started with Flutter Development",
-  //     issuer: "Google Cloud & Coursera",
-  //     date: "Feb 6, 2024",
-  //     image: testImg,
-  //     verifyLink: "https://coursera.org/verify/XYZ123",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Full-Stack Web Development",
-  //     issuer: "Udemy",
-  //     date: "Jan 15, 2023",
-  //     image: testImg,
-  //     verifyLink: "https://udemy.com/certificate/ABC456",
-  //   },
 
-  // ];
+const certifications = [
+  {
+    id: 1,
+    title: "Getting Started with Flutter Development",
+    issuer: "Google Cloud & Coursera",
+    date: "Feb 6, 2024",
+    image: testImg,
+    verifyLink: "https://coursera.org/verify/TFXDJ7DFSH4",
+    downloadLink: "/certificates/flutter-cert.pdf",
+    description:
+      "Introduction to Flutter framework, Dart language, and UI fundamentals."
+  },
+  {
+    id: 2,
+    title: "Full-Stack Web Development",
+    issuer: "Udemy",
+    date: "Jan 15, 2023",
+    image: testImg,
+    verifyLink: "https://udemy.com/certificate/ABC456",
+    downloadLink: "/certificates/web-cert.pdf",
+    description: "Covers HTML, CSS, JavaScript, Node.js, MongoDB, and React."
+  }
+  // Add more certifications here...
+];
+
+export default function Certifications() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [showAll, setShowAll] = useState(false);
+
+  const handlePrev = () => {
+    setCurrentIndex(
+      prev => (prev - 1 + certifications.length) % certifications.length
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex(prev => (prev + 1) % certifications.length);
+  };
+
   return (
-    <div className="h-screen container  mx-auto">
+    <div className="min-h-screen container mx-auto text-white">
       <Navbar />
 
-      <div className=" pt-24 p-5">
+      <div className="pt-24 p-5">
+        <div className="text-transparent  bg-clip-text bg-gradient-to-r from-primary from-50% to-white to-60% lg:text-4xl text-3xl font-bold text-center pb-10 animate__animated animate__fadeInDown">
+          My <span>Certification</span>
+        </div>
         <div className="flex p-5 rounded-xl bg-zinc-800 flex-wrap">
-          <div className="md:w-1/2 rounded-xl w-full ">
+          <div className="md:w-1/2 w-full">
             <div className="flex items-center">
-              <p className="text-lg">Certificate details</p>
-              <div className="bg-primary h-1 mx-4 rounded-full w-1/2" />
+              <p className="text-lg animate__animated animate__fadeInDown">
+                Certificate details
+              </p>
+              <div className="bg-primary h-1 mx-4 rounded-full w-1/2 animate__animated animate__fadeInRight" />
             </div>
-            <div>
-              <br />
-              <div className="flex">
-                <p className="lg:text-xl text-base text-primary font-semibold">
-                  Certificate Title
-                </p>
-                <p className="lg:text-xl text-base px-3 font-semibold">
-                  Getting started with flutter
-                </p>
-              </div>
-              <br />
-              <div className="flex">
-                <p className="lg:text-xl text-base text-primary font-semibold">
-                  Issued by
-                </p>
-                <p className="lg:text-xl text-base px-3 font-semibold">
-                  Google cloud & coursera
-                </p>
-              </div>
-              <br />
-              <div className="flex">
-                <p className="lg:text-xl text-base text-primary font-semibold">
-                  Issued on
-                </p>
-                <p className="lg:text-xl text-base px-3 font-semibold">Feb 6, 2024</p>
-              </div>
-              <br />
-              <div className="flex items-center">
-                <div className="bg-primary h-1 rounded-full w-1/2" />
-                <p className="text-lg mx-4"></p>
-              </div>
+            <br />
+            <p className="text-xl font-semibold text-primary animate__animated animate__fadeInLeft">
+              {certifications[currentIndex].title}
+            </p>
+            <p className="pt-2 animate__animated animate__fadeInDown">
+              Issued by:{" "}
+              <span className="font-semibold ">
+                {certifications[currentIndex].issuer}
+              </span>
+            </p>
+            <p className="animate__animated animate__fadeInUp">
+              Issued on: {certifications[currentIndex].date}
+            </p>
+            <p className="pt-4 text-sm text-gray-400 animate__animated animate__fadeInRight">
+              {certifications[currentIndex].description}
+            </p>
+
+            <div className="mt-6 space-x-3 flex">
+              <div className="animate__animated animate__fadeInDown"><CustomButton /></div>
+              <div className="animate__animated animate__fadeInUp"><CustomShowCertificationButton /></div>
             </div>
+            {/* <div className="mt-6 space-x-3">
+              <CustomShowCertificationButton />
+            </div> */}
           </div>
+
           <div className="md:w-1/2">
             <img
-              src={testImg}
-              className="shadow-3md mt-5 shadow-primary "
-              alt="Certifications image"
+              src={certifications[currentIndex].image}
+              className="animate__animated animate__fadeIn shadow-3xl mt-5 rounded-md shadow-cyan-500"
+              alt="Certification"
             />
-            <div className="flex justify-end mt-7 ">
-              <div className="bg-primary rounded-md p-2 hover:scale-105 duration-300 hover:cursor-pointer">
+            <div className="flex justify-end mt-7">
+              <button
+                onClick={handlePrev}
+                className="bg-primary rounded-md p-2 hover:scale-105 duration-300 animate__animated animate__fadeInLeft"
+              >
                 <FontAwesomeIcon
                   icon={faArrowRight}
                   className="text-2xl text-black rotate-180"
                 />
-              </div>
-
-              <div className="bg-primary rounded-md p-2 mx-4 hover:scale-105 duration-300 hover:cursor-pointer">
+              </button>
+              <button
+                onClick={handleNext}
+                className="bg-primary rounded-md p-2 mx-4 hover:scale-105 duration-300 animate__animated animate__fadeInRight"
+              >
                 <FontAwesomeIcon
                   icon={faArrowRight}
                   className="text-2xl text-black"
                 />
-              </div>
+              </button>
             </div>
           </div>
         </div>
@@ -93,6 +119,7 @@ export default function Certifications() {
     </div>
   );
 }
+
 // import { useState } from "react";
 // const [selectedCert, setSelectedCert] = useState(null);
 
