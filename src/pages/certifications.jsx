@@ -1,45 +1,106 @@
 import { useState } from "react";
 import Navbar from "../components/navbar";
-import testImg from "../assets/certifications/dart.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CustomButton from "../components/custom_download_button";
 import CustomShowCertificationButton from "../components/custom_show_certification";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import dartCertification from "../assets/certifications_image/dart_certification_img.png";
+import flutterCertification from "../assets/certifications_image/flutter_certification_img.png";
+import tailwindCertification from "../assets/certifications_image/tailwind_certification_img.png";
+import bootstrapCertification from "../assets/certifications_image/bootstrap_certification_img.png";
+import itSharksCertification from "../assets/certifications_image/it_sharks_certification_img.jpg";
+import itSharks2Certification from "../assets/certifications_image/it_sharks2_certification_img.jpg";
+import ideasAndConceptsCertification from "../assets/certifications_image/ideas_and_concepts_certification_img.jpg";
 
 const certifications = [
   {
     id: 1,
-    title: "Getting Started with Flutter Development",
-    issuer: "Google Cloud & Coursera",
-    date: "Feb 6, 2024",
-    image: testImg,
-    verifyLink: "https://coursera.org/verify/TFXDJ7DFSH4",
-    downloadLink: "/certificates/flutter-cert.pdf",
-    description:
-      "Introduction to Flutter framework, Dart language, and UI fundamentals."
+    title: "Developing Websites And Front-Ends With Bootstrap ",
+    issuer: "Coursera & IPM",
+    date: "Ape 2, 2025",
+    image: bootstrapCertification,
+    verifyLink: "https://coursera.org/share/8927d7f420a8f0e8565aabec1451aa92",
+    downloadLink: "/my-portfolio/certifications_pdf/bootstrap_certification.pdf",
+    description: "Covers HTML, CSS, JavaScript, Node.js, MongoDB, and React."
   },
   {
     id: 2,
-    title: "Full-Stack Web Development",
-    issuer: "Udemy",
-    date: "Jan 15, 2023",
-    image: testImg,
-    verifyLink: "https://udemy.com/certificate/ABC456",
-    downloadLink: "/certificates/web-cert.pdf",
+    title: "Introduction To Dart",
+    issuer: "Coursera & Google Cloud",
+    date: "Dec 7, 2024",
+    image: dartCertification,
+    verifyLink: "https://coursera.org/share/09660e6fe77c82cdc446101f8875c14f",
+    downloadLink: "/my-portfolio/certifications_pdf/dart_certification.pdf",
     description: "Covers HTML, CSS, JavaScript, Node.js, MongoDB, and React."
+  },
+  {
+    id: 3,
+    title: "Learn Tailwind CSS",
+    issuer: "Coursera & SCRIMBA",
+    date: "Dec 7, 2024",
+    image: tailwindCertification,
+    verifyLink: "https://udemy.com/certificate/ABC456",
+    downloadLink: "/my-portfolio/certificates/web-cert.pdf",
+    description: "Covers HTML, CSS, JavaScript, Node.js, MongoDB, and React."
+  },
+  {
+    id: 4,
+    title: "Working In Flutter Applications",
+    issuer: "Ideas And Concepts Company",
+    date: "Des 1, 2024",
+    image: ideasAndConceptsCertification,
+    verifyLink: "https://udemy.com/certificate/ABC456",
+    downloadLink: "/my-portfolio/certifications_pdf/ideas_and_concepts.pdf",
+    description: "Covers HTML, CSS, JavaScript, Node.js, MongoDB, and React."
+  },
+
+  {
+    id: 5,
+    title: "Mobile Application Diploma (Dart / Flutter)",
+    issuer: "IT Sharks Company",
+    date: "Apr 18, 2024",
+    image: itSharks2Certification,
+    verifyLink: "https://udemy.com/certificate/ABC456",
+    downloadLink: "/my-portfolio/certifications_pdf/it_sharks2.pdf",
+    description: "Covers HTML, CSS, JavaScript, Node.js, MongoDB, and React."
+  },
+
+  {
+    id: 6,
+    title: "Mobile Application Diploma (Dart / Flutter)",
+    issuer: "IT Sharks Company & Egyptian Ministry Of Foreign Affairs",
+    date: "May 12, 2024",
+    image: itSharksCertification,
+    verifyLink: "https://udemy.com/certificate/ABC456",
+    downloadLink: "/my-portfolio/certifications_pdf/it_sharks.pdf",
+    description: "Covers HTML, CSS, JavaScript, Node.js, MongoDB, and React."
+  },
+  {
+    id: 7,
+    title: "Getting Started with Flutter Development",
+    issuer: "Coursera & Google Cloud",
+    date: "Feb 6, 2024",
+    image: flutterCertification,
+    verifyLink: "https://coursera.org/verify/TFXDJ7DFSH4",
+    downloadLink: "/my-portfolio/certifications_pdf/flutter_certification.pdf",
+    description:
+      "Introduction to Flutter framework, Dart language, and UI fundamentals."
   }
-  // Add more certifications here...
 ];
 
 export default function Certifications() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showAll, setShowAll] = useState(false);
 
   const handlePrev = () => {
     setCurrentIndex(
       prev => (prev - 1 + certifications.length) % certifications.length
     );
   };
+
+  const onClickDownload= ()=>{
+    console.log('Mohamed')
+  }
+
 
   const handleNext = () => {
     setCurrentIndex(prev => (prev + 1) % certifications.length);
@@ -79,8 +140,12 @@ export default function Certifications() {
             </p>
 
             <div className="mt-6 space-x-3 flex">
-              <div className="animate__animated animate__fadeInDown"><CustomButton /></div>
-              <div className="animate__animated animate__fadeInUp"><CustomShowCertificationButton /></div>
+              <div className="animate__animated animate__fadeInDown">
+                <CustomButton DownloadLink={certifications[currentIndex].downloadLink}/>
+              </div>
+              <div className="animate__animated animate__fadeInUp">
+                <CustomShowCertificationButton />
+              </div>
             </div>
             {/* <div className="mt-6 space-x-3">
               <CustomShowCertificationButton />
@@ -90,7 +155,7 @@ export default function Certifications() {
           <div className="md:w-1/2">
             <img
               src={certifications[currentIndex].image}
-              className="animate__animated animate__fadeIn shadow-3xl mt-5 rounded-md shadow-cyan-500"
+              className="animate__animated animate__fadeIn  shadow-3xl mt-5 rounded-md shadow-cyan-500"
               alt="Certification"
             />
             <div className="flex justify-end mt-7">

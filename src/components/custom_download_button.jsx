@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const CustomButton = () => {
+const CustomButton = ({DownloadLink}) => {
   return (
     <StyledWrapper>
+      <a href={DownloadLink}>
       <button className="button group">
         <span className="button-content">Download </span>
       </button>
+      </a>
     </StyledWrapper>
   );
 };
