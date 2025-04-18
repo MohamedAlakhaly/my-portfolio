@@ -44,14 +44,14 @@ export default function Home() {
           <h3 className="text-2xl font-medium py-2  animate__animated animate__fadeInRight">
             I'm a <span className="text-primary " ref={el} />
           </h3>
-          {/* <p className="text-lg font-thin text-gray-300 animate__animated animate__fadeInLeft description">
+          <p className="text-lg font-thin text-gray-300 animate__animated animate__fadeInLeft description">
             I am a programmer passionate about building high-quality web and
             mobile applications using the latest technologies.<br/><br/> I work to
             transform ideas into integrated digital solutions, focusing on user
             experience and efficient performance. I always strive to stay
             abreast of the latest technologies and best practices in the world
             of programming.
-          </p> */}
+          </p>
 
           {/* <p className="text-lg font-thin text-gray-300 animate__animated animate__fadeInLeft description">
             I transform ideas into high-performance digital solutions.
@@ -63,7 +63,7 @@ export default function Home() {
             Currently exploring AI integration in web technologies.
           </p> */}
 
-          <p className="text-lg font-thin text-gray-300 animate__animated animate__fadeInLeft description">
+          {/* <p className="text-lg font-thin text-gray-300 animate__animated animate__fadeInLeft description">
             I am a passionate programmer specializing in building
             high-performance digital solutions. My expertise includes:
             <br />
@@ -76,7 +76,7 @@ export default function Home() {
             Committed to clean code architecture and exceptional user
             experiences. Constantly exploring cutting-edge technologies like AI
             integration.
-          </p>
+          </p> */}
 
           {/* //? social media buttons */}
           <div className="py-7 flex animate__animated animate__fadeInUp">
