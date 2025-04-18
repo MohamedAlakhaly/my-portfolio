@@ -36,7 +36,7 @@ export default function Home() {
       {/* //! end navbar section */}
 
       {/* //! start hero section */}
-      <main className="flex flex-wrap pt-52">
+      <main className="flex flex-wrap md:pt-52 pt-28">
         <div className="w-full lg:w-1/2 p-5 ">
           <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-primary from-20% to-white to-60% text-4xl font-bold capitalize animate__animated animate__fadeInLeft">
             hi, it's mohamed

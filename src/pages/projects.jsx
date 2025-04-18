@@ -20,28 +20,28 @@ export default function Projects() {
       title: "Live Streamer Web",
       image: LiveStreamProject,
       hoverColor: "from-pink-500",
-      cardAnimation: "animate__animated animate__fadeInDown"
+      cardAnimation: "animate__animated animate__fadeInLeft"
     },
     {
       id: "3",
       title: "My Portfolio",
       image: MyPortfolioProject,
       hoverColor: "from-primary",
-      cardAnimation: "animate__animated animate__fadeInRight"
+      cardAnimation: "animate__animated animate__fadeInLeft"
     },
     {
       id: "4",
       title: "Portfolio Web",
       image: PortfolioProject,
       hoverColor: "from-yellow-400",
-      cardAnimation: "animate__animated animate__fadeInRight"
+      cardAnimation: "animate__animated animate__fadeInLeft"
     },
     {
       id: "5",
       title: "Bonvero",
       image: BonveroProject,
       hoverColor: "from-green-500",
-      cardAnimation: "animate__animated animate__fadeInUp"
+      cardAnimation: "animate__animated animate__fadeInLeft"
     }
   ];
   return (
