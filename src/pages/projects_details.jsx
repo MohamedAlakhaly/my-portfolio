@@ -12,6 +12,7 @@ import ECommerceImg5 from "../assets/my_projects/e-commerce/5.png";
 import LiveStreamImg1 from "../assets/my_projects/live_stream/1.png";
 import MyPortfolioImg1 from "../assets/my_projects/my_portfolio/1.png";
 import PortfolioImg from "../assets/my_projects/portfolio/1.png";
+import BonveroImg from "../assets/my_projects/Bonvero/Blue_Modern_Mobile_Application_Presentation.png";
 export default function ProjectsDetails() {
   const loremText =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sit cum explicabo voluptate tenetur libero facere quam. Eligendi est omnis numquam tempora. Deleniti facilis inventore ipsam minus eius temporibus explicabo";
@@ -62,6 +63,16 @@ export default function ProjectsDetails() {
       github: "https://github.com/MohamedAlakhaly",
       liveDemo: "https://mohamedalakhaly.github.io/web-portfolio/",
       images: [PortfolioImg]
+    },
+    {
+      id: "5",
+      title: "Bonvero Restaurant",
+      description:
+        "This website is a personal project. It is an interactive gaming website that aims to provide a fun and simple experience for users. The website features an attractive and easy-to-use design, with a focus on creating an interactive and engaging user interface.",
+      technologies: ["Flutter", "Firebase", "GetX"],
+      github: "https://github.com/MohamedAlakhaly",
+      liveDemo: "https://github.com/MohamedAlakhaly/restaurant-app",
+      images: [BonveroImg]
     }
   ];
 

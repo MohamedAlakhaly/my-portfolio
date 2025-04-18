@@ -23,10 +23,11 @@ export default function Contact() {
             Let's work together
           </h1>
           <p className="text-slate-300 py-7 animate__animated animate__fadeInLeft">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil
-            corrupti eius, corporis mollitia totam recusandae veniam neque
-            ratione non natus amet quidem dolores officia id sed praesentium
-            officiis impedit? Necessitatibus.
+            As a web and mobile app developer, I'm happy to receive your
+            inquiries about your upcoming projects, whether it's developing
+            professional websites or innovative mobile apps for iOS and Android.
+            Feel free to contact me to discuss the details and transform your
+            ideas into a distinctive and effective digital reality.
           </p>
 
           {/* //! form */}

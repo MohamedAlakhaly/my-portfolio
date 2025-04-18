@@ -1,6 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-export default function PersonalInfoCard({ cardIcon, cardTitle, cardContent,cardAnimation }) {
+export default function PersonalInfoCard({
+  cardIcon,
+  cardTitle,
+  cardContent,
+  cardAnimation
+}) {
   return (
     <div className={`flex items-center py-2 ${cardAnimation}`}>
       {/* //! card icon */}
@@ -14,7 +19,8 @@ export default function PersonalInfoCard({ cardIcon, cardTitle, cardContent,card
         <h3 className="text-zinc-400 font-semibold capitalize">
           {cardTitle}
         </h3>
-        <h3 className="pt-2 capitalize">
+
+        <h3 className="pt-2">
           {cardContent}
         </h3>
       </div>

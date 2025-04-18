@@ -6,11 +6,12 @@ export default function ProjectsCard({
   project_name,
   project_img,
   project_details,
-  hover_color
+  hover_color,
+  card_animation
 }) {
 
   return (
-    <div className="bg-dark h-72 rounded-3xl overflow-hidden group relative ">
+    <div className={`bg-dark h-72 rounded-3xl overflow-hidden group relative ${card_animation}`}>
       <div
         style={{ backgroundImage: `url(${project_img})`}}
         className={`bg-cover h-72 bg-center group-hover:blur-sm group-hover:opacity-50 transform group-hover:scale-105 duration-200`}

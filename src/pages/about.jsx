@@ -1,4 +1,3 @@
-
 import Navbar from "../components/navbar";
 import img1 from "../assets/Clipped_image_20241201_070236.png";
 import AboutInfo from "../components/about_info";
@@ -33,7 +32,143 @@ import vscodeLogo from "../assets/tools_skills/vscode.svg";
 import androidStudioLogo from "../assets/tools_skills/android_studio.svg";
 export default function About() {
   const [activeSkill, setActiveSkill] = useState("web");
-  // const buttonStyle ="bg-zinc-800 p-2 rounded-lg outline-none outline-primary hover:shadow-3md hover:shadow-primary";
+  const webSkills = [
+    {
+      skill: "HTML",
+      level: "advanced",
+      skillLogo: htmlLogo
+    },
+    {
+      skill: "CSS",
+      level: "advanced",
+      skillLogo: cssLogo
+    },
+    {
+      skill: "SASS",
+      level: "advanced",
+      skillLogo: sassLogo
+    },
+    {
+      skill: "Bootstrap",
+      level: "advanced",
+      skillLogo: bootstrapLogo
+    },
+    {
+      skill: "Tailwind CSS",
+      level: "advanced",
+      skillLogo: tailwindLogo
+    },
+
+    {
+      skill: "JavaScript",
+      level: "advanced",
+      skillLogo: javascriptLogo
+    },
+
+    {
+      skill: "React Js",
+      level: "advanced",
+      skillLogo: reactLogo
+    },
+
+    {
+      skill: "Node Js",
+      level: "advanced",
+      skillLogo: nodeLogo
+    },
+    {
+      skill: "Express Js",
+      level: "advanced",
+      skillLogo: expressJsLogo
+    },
+    {
+      skill: "Mongo DB",
+      level: "advanced",
+      skillLogo: mongoLogo
+    }
+  ];
+  const mobileSkills = [
+    {
+      skill: "Dart",
+      level: "Advanced",
+      skillLogo: dartLogo
+    },
+    {
+      skill: "Flutter",
+      level: "Advanced",
+      skillLogo: flutterLogo
+    },
+    {
+      skill: "Firebase",
+      level: "Advanced",
+      skillLogo: firebaseLogo
+    },
+    {
+      skill: "GetX",
+      level: "Advanced",
+      skillLogo: getxLogo
+    },
+    {
+      skill: "SQlite",
+      level: "Advanced",
+      skillLogo: sqliteLogo
+    },
+    {
+      skill: "API",
+      level: "Advanced",
+      skillLogo: apiLogo
+    },
+    {
+      skill: "Node Js",
+      level: "Advanced",
+      skillLogo: nodeLogo
+    },
+
+    {
+      skill: "Express Js",
+      level: "Advanced",
+      skillLogo: expressJsLogo
+    },
+
+    {
+      skill: "Mongo DB",
+      level: "Advanced",
+      skillLogo: mongoLogo
+    }
+  ];
+
+  const toolsSkills = [
+    {
+      skill: "Git",
+      level: "Advanced",
+      skillLogo: gitLogo
+    },
+    {
+      skill: "Github",
+      level: "Advanced",
+      skillLogo: githubLogo
+    },
+    {
+      skill: "Npm",
+      level: "Advanced",
+      skillLogo: npmLogo
+    },
+    {
+      skill: "Pub",
+      level: "Advanced",
+      skillLogo: dartLogo
+    },
+    {
+      skill: "VS Code",
+      level: "Advanced",
+      skillLogo: vscodeLogo
+    },
+    {
+      skill: "Android Studio",
+      level: "Advanced",
+      skillLogo: androidStudioLogo
+    }
+  ];
   return (
     <div className="h-screen container mx-auto ">
       <Navbar />
@@ -58,10 +193,7 @@ export default function About() {
 
               <div className="lg:w-1/2 animate__animated animate__fadeInUp">
                 <h3 className="py-6">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Blanditiis necessitatibus dignissimos quod praesentium
-                  mollitia ratione earum dolore fuga eligendi unde quae magni,
-                  illum hic quaerat eveniet repudiandae sapiente eaque nam?
+                Passionate developer with expertise in building end-to-end digital solutions. I bridge the gap between ideas and execution by combining technical skills with creative problem-solving.
                 </h3>
 
                 <div className="py-6 capitalize grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
@@ -78,7 +210,7 @@ export default function About() {
                   <AboutInfo title="email" content="alakhail755@gmail.com" />
                   <AboutInfo
                     title="languages"
-                    content="Arabic, english, french, dutch"
+                    content="Arabic, english, french (A1), dutch (A1)"
                   />
                 </div>
               </div>
@@ -135,55 +267,13 @@ export default function About() {
               ? ""
               : "hidden"}`}
           >
-            <SkillsCard skills="html" level="advanced" skillsLogo={htmlLogo} />
-            <SkillsCard skills="css" level="advanced" skillsLogo={cssLogo} />
-            <SkillsCard skills="sass" level="advanced" skillsLogo={sassLogo} />
-            <SkillsCard
-              skills="javascript"
-              level="advanced"
-              skillsLogo={javascriptLogo}
-            />
-            <SkillsCard
-              skills="bootstrap"
-              level="advanced"
-              skillsLogo={bootstrapLogo}
-            />
-            <SkillsCard
-              skills="tailwind css"
-              level="advanced"
-              skillsLogo={tailwindLogo}
-            />
-            <SkillsCard
-              skills="react"
-              level="advanced"
-              skillsLogo={reactLogo}
-            />
-            <SkillsCard
-              skills="node js"
-              level="advanced"
-              skillsLogo={nodeLogo}
-            />
-            <SkillsCard
-              skills="express js"
-              level="advanced"
-              skillsLogo={expressJsLogo}
-            />
-            <SkillsCard
-              skills="mongoDB"
-              level="advanced"
-              skillsLogo={mongoLogo}
-            />
-            <SkillsCard skills="php" level="advanced" skillsLogo={phpLogo} />
-            <SkillsCard
-              skills="SQL ( mySql )"
-              level="advanced"
-              skillsLogo={mySqlLogo}
-            />
-            <SkillsCard
-              skills="laravel"
-              level="advanced"
-              skillsLogo={laravelLogo}
-            />
+            {webSkills.map(webSkill =>
+              <SkillsCard
+                skills={webSkill.skill}
+                level={webSkill.level}
+                skillsLogo={webSkill.skillLogo}
+              />
+            )}
           </div>
           {/* //! end web section */}
 
@@ -194,36 +284,13 @@ export default function About() {
               ? ""
               : "hidden"}`}
           >
-            <SkillsCard skills="dart" level="advanced" skillsLogo={dartLogo} />
-            <SkillsCard
-              skills="flutter"
-              level="advanced"
-              skillsLogo={flutterLogo}
-            />
-            <SkillsCard
-              skills="firebase"
-              level="advanced"
-              skillsLogo={firebaseLogo}
-            />
-            <SkillsCard skills="GetX" level="advanced" skillsLogo={getxLogo} />
-            <SkillsCard
-              skills="sqLite"
-              level="advanced"
-              skillsLogo={sqliteLogo}
-            />
-            <SkillsCard skills="API" level="advanced" skillsLogo={apiLogo} />
-
-            <SkillsCard skills="php" level="advanced" skillsLogo={phpLogo} />
-            <SkillsCard
-              skills="SQL ( mySql )"
-              level="advanced"
-              skillsLogo={mySqlLogo}
-            />
-            <SkillsCard
-              skills="laravel"
-              level="advanced"
-              skillsLogo={laravelLogo}
-            />
+            {mobileSkills.map(mobileSkill =>
+              <SkillsCard
+                skills={mobileSkill.skill}
+                level={mobileSkill.level}
+                skillsLogo={mobileSkill.skillLogo}
+              />
+            )}
           </div>
           {/* //! end mobile section */}
 
@@ -234,25 +301,13 @@ export default function About() {
               ? ""
               : "hidden"}`}
           >
-            <SkillsCard skills="git" level="advanced" skillsLogo={gitLogo} />
-
-            <SkillsCard
-              skills="github"
-              level="advanced"
-              skillsLogo={githubLogo}
-            />
-            <SkillsCard skills="npm" level="advanced" skillsLogo={npmLogo} />
-            <SkillsCard skills="pub" level="advanced" skillsLogo={dartLogo} />
-            <SkillsCard
-              skills="vS code"
-              level="advanced"
-              skillsLogo={vscodeLogo}
-            />
-            <SkillsCard
-              skills="android studio"
-              level="advanced"
-              skillsLogo={androidStudioLogo}
-            />
+            {toolsSkills.map(toolSkill =>
+              <SkillsCard
+                skills={toolSkill.skill}
+                level={toolSkill.level}
+                skillsLogo={toolSkill.skillLogo}
+              />
+            )}
           </div>
           {/* //! end mobile section */}
         </div>

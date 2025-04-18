@@ -44,11 +44,38 @@ export default function Home() {
           <h3 className="text-2xl font-medium py-2  animate__animated animate__fadeInRight">
             I'm a <span className="text-primary " ref={el} />
           </h3>
-          <p className="text-gray-300 animate__animated animate__fadeInLeft">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            quae optio aliquid dolor iste sed, voluptatibus, rerum sapiente
-            corporis ipsum, recusandae laborum consequatur veniam voluptates
-            voluptas eveniet soluta excepturi architecto!
+          {/* <p className="text-lg font-thin text-gray-300 animate__animated animate__fadeInLeft description">
+            I am a programmer passionate about building high-quality web and
+            mobile applications using the latest technologies.<br/><br/> I work to
+            transform ideas into integrated digital solutions, focusing on user
+            experience and efficient performance. I always strive to stay
+            abreast of the latest technologies and best practices in the world
+            of programming.
+          </p> */}
+
+          {/* <p className="text-lg font-thin text-gray-300 animate__animated animate__fadeInLeft description">
+            I transform ideas into high-performance digital solutions.
+            Specializing in:
+            <br />- Building responsive web apps with **React**
+            <br />- Developing cross-platform mobile apps using **Flutter**
+            <br />- Crafting robust backend systems with **Node.js** Committed
+            to clean code architecture and exceptional user experiences.
+            Currently exploring AI integration in web technologies.
+          </p> */}
+
+          <p className="text-lg font-thin text-gray-300 animate__animated animate__fadeInLeft description">
+            I am a passionate programmer specializing in building
+            high-performance digital solutions. My expertise includes:
+            <br />
+            <span className="font-medium">- Developing responsive web applications with **React**</span>
+            <br />
+            <span className="font-medium">- Creating cross-platform mobile apps using **Flutter**</span>
+            <br />
+            <span className="font-medium">- Designing scalable backend systems with **Node.js** </span>
+            <br />
+            Committed to clean code architecture and exceptional user
+            experiences. Constantly exploring cutting-edge technologies like AI
+            integration.
           </p>
 
           {/* //? social media buttons */}
