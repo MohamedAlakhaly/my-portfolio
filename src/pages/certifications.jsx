@@ -20,7 +20,8 @@ const certifications = [
     date: "Ape 2, 2025",
     image: bootstrapCertification,
     verifyLink: "https://coursera.org/share/8927d7f420a8f0e8565aabec1451aa92",
-    downloadLink: "/my-portfolio/certifications_pdf/bootstrap_certification.pdf",
+    downloadLink:
+      "/my-portfolio/certifications_pdf/bootstrap_certification.pdf",
     description: "Covers HTML, CSS, JavaScript, Node.js, MongoDB, and React."
   },
   {
@@ -97,10 +98,9 @@ export default function Certifications() {
     );
   };
 
-  const onClickDownload= ()=>{
-    console.log('Mohamed')
-  }
-
+  const onClickDownload = () => {
+    console.log("Mohamed");
+  };
 
   const handleNext = () => {
     setCurrentIndex(prev => (prev + 1) % certifications.length);
@@ -139,14 +139,20 @@ export default function Certifications() {
               {certifications[currentIndex].description}
             </p>
 
-            <div className="mt-6 space-x-3 flex">
+            {/* <div className="mt-6 space-x-3 flex">
               <div className="animate__animated animate__fadeInDown">
-                <CustomButton DownloadLink={certifications[currentIndex].downloadLink}/>
+                <CustomButton
+                  DownloadLink={certifications[currentIndex].downloadLink}
+                />
               </div>
-              <div className="animate__animated animate__fadeInUp">
-                <CustomShowCertificationButton />
+            </div> */}
+
+            <a href={certifications[currentIndex].downloadLink}>
+
+              <div className="mt-4 px-4 py-2 space-y-9 bg-primary inline-block text-black font-semibold rounded-full hover:bg-black hover:text-primary hover:outline outline-1 duration-200 cursor-pointer hover:shadow-3md hover:shadow-primary animate__animated animate__fadeInUp">
+                Download
               </div>
-            </div>
+            </a>
             {/* <div className="mt-6 space-x-3">
               <CustomShowCertificationButton />
             </div> */}
