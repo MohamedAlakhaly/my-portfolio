@@ -8,35 +8,15 @@ import Projects from "./pages/projects.jsx";
 import ProjectsDetails from "./pages/projects_details";
 import Contact from "./pages/contact.jsx";
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter >
-    <Routes >
+  <BrowserRouter>
+    <Routes>
       <Route path="/my-portfolio/" element={<Home />} />
-    </Routes>
-
-    <Routes>
       <Route path="/my-portfolio/services" element={<Services />} />
-    </Routes>
-
-
-    <Routes>
       <Route path="/my-portfolio/about" element={<About />} />
-    </Routes>
-
-    <Routes>
       <Route path="/my-portfolio/certifications" element={<Certifications />} />
-    </Routes>
-
-    <Routes>
       <Route path="/my-portfolio/projects" element={<Projects />} />
-    </Routes>
-
-    <Routes>
       <Route path="/my-portfolio/projects/:id" element={<ProjectsDetails />} />
-    </Routes>
-
-    <Routes>
       <Route path="/my-portfolio/contact" element={<Contact />} />
     </Routes>
-
   </BrowserRouter>
 );

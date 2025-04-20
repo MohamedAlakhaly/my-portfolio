@@ -210,7 +210,7 @@ export default function About() {
                   <AboutInfo title="email" content="alakhail755@gmail.com" />
                   <AboutInfo
                     title="languages"
-                    content="Arabic, english, french (A1), dutch (A1)"
+                    content="Arabic, english, french (Basic), dutch (Basic)"
                   />
                 </div>
               </div>

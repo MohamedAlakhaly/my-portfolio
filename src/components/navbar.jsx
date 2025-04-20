@@ -1,128 +1,115 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
+
 export default function Navbar() {
   const [navState, setNavState] = useState("close");
-  const navItemsStyle =
-    "capitalize hover:text-primary hover:underline hover:underline-offset-8 ease-in duration-200";
+
+  const linkStyle = ({ isActive }) =>
+    isActive
+      ? "text-cyan-400 border-b-2 border-cyan-400 pb-1 capitalize transition duration-200"
+      : "text-white hover:text-cyan-400 capitalize transition duration-200";
+
   return (
-    <div className="">
-      <nav className="md:flex md:justify-between py-6 animate__animated animate__fadeInDown fixed w-full z-10 top-0 left-0  backdrop-blur-lg">
+    <div>
+      <nav className="md:flex md:justify-between py-6 animate__animated animate__fadeInDown fixed w-full z-10 top-0 left-0 backdrop-blur-lg">
+        {/* Logo */}
         <div className="text-2xl font-bold cursor-pointer ml-3">
-          <a href="/my-portfolio/">
+          <NavLink to="/my-portfolio/">
             <span className="hidden md:inline">Mohamed </span>
-            <span className="text-primary ">Al-Akhaly</span>
-          </a>
+            <span className="text-primary">Al-Akhaly</span>
+          </NavLink>
         </div>
 
+        {/* Mobile Nav */}
         <div
-          className={`${navState == "close"
+          className={`${navState === "close"
             ? "hidden"
             : ""} w-full h-96 md:hidden mt-2 duration-300`}
         >
           <ul className="h-96 flex flex-col justify-around items-center">
             <li>
-              <a href="/my-portfolio/" className={navItemsStyle}>
+              <NavLink to="/my-portfolio/" end className={linkStyle}>
                 home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/my-portfolio/services" className={navItemsStyle}>
+              <NavLink to="/my-portfolio/services" className={linkStyle}>
                 services
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/my-portfolio/about" className={navItemsStyle}>
+              <NavLink to="/my-portfolio/about" className={linkStyle}>
                 about
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/my-portfolio/certifications" className={navItemsStyle}>
-                Certifications
-              </a>
+              <NavLink to="/my-portfolio/certifications" className={linkStyle}>
+                certifications
+              </NavLink>
             </li>
             <li>
-              <a href="/my-portfolio/projects" className={navItemsStyle}>
+              <NavLink to="/my-portfolio/projects" className={linkStyle}>
                 projects
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/my-portfolio/contact" className={navItemsStyle}>
+              <NavLink to="/my-portfolio/contact" className={linkStyle}>
                 contact
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
 
+        {/* Menu Icons */}
         <FontAwesomeIcon
           icon={faBars}
-          onClick={() => {
-            setNavState("open");
-          }}
+          onClick={() => setNavState("open")}
           className={`${navState === "close"
             ? ""
-            : "hidden"} ' text-primary absolute top-6 right-3  text-3xl mr-5 self-center md:hidden '`}
+            : "hidden"} text-primary absolute top-6 right-3 text-3xl mr-5 self-center md:hidden`}
         />
-
         <FontAwesomeIcon
           icon={faClose}
           onClick={() => setNavState("close")}
           className={`${navState === "open"
             ? ""
-            : "hidden"}  text-primary absolute top-6 right-3 text-3xl mr-5 self-center md:hidden`}
+            : "hidden"} text-primary absolute top-6 right-3 text-3xl mr-5 self-center md:hidden`}
         />
 
+        {/* Desktop Nav */}
         <div className="hidden md:flex mr-10">
           <ul className="md:flex space-x-5">
             <li>
-              <a
-                href="/my-portfolio/"
-                className={navItemsStyle}
-                onClick={() => setActiveItem("home")}
-              >
+              <NavLink to="/my-portfolio/" end className={linkStyle}>
                 home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="/my-portfolio/services"
-                className={navItemsStyle}
-                onClick={() => setActiveItem("services")}
-              >
+              <NavLink to="/my-portfolio/services" className={linkStyle}>
                 services
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="/my-portfolio/about"
-                className={navItemsStyle}
-                onClick={() => setActiveItem("about")}
-              >
+              <NavLink to="/my-portfolio/about" className={linkStyle}>
                 about
-              </a>
+              </NavLink>
             </li>
             <li>
-            <a href="/my-portfolio/certifications" className={navItemsStyle}>
-            Certifications
-            </a>
-          </li>
+              <NavLink to="/my-portfolio/certifications" className={linkStyle}>
+                certifications
+              </NavLink>
+            </li>
             <li>
-              <a
-                href="/my-portfolio/projects"
-                className={navItemsStyle}
-                onClick={() => setActiveItem("projects")}
-              >
+              <NavLink to="/my-portfolio/projects" className={linkStyle}>
                 projects
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="/my-portfolio/contact"
-                className={navItemsStyle}
-                onClick={() => setActiveItem("contact")}
-              >
+              <NavLink to="/my-portfolio/contact" className={linkStyle}>
                 contact
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

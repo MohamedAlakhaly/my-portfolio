@@ -140,7 +140,7 @@ export default function ProjectsDetails() {
           <img
             src={project.images[currentImage]}
             alt="project photos"
-            className="w-full h-96 object-cover animate__animated animate__fadeIn shadow-3md"
+            className="w-full md:h-96  object-cover animate__animated animate__fadeIn shadow-3md"
           />
           <div className="flex justify-end mt-7">
             <div
