@@ -8,12 +8,12 @@ export default function Navbar() {
 
   const linkStyle = ({ isActive }) =>
     isActive
-      ? "text-cyan-400 border-b-2 border-cyan-400 pb-1 capitalize transition duration-200"
-      : "text-white hover:text-cyan-400 capitalize transition duration-200";
+      ? "text-primary border-b-2 border-primary pb-1 capitalize transition duration-300 relative after:absolute "
+      : "text-white hover:text-primary capitalize transition duration-300 relative after:absolute after:w-0 after:h-1 after:bg-primary/20 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full after:rounded-t-md";
 
   return (
     <div>
-      <nav className="md:flex md:justify-between py-6 animate__animated animate__fadeInDown fixed w-full z-10 top-0 left-0 backdrop-blur-lg">
+      <nav className="md:flex md:justify-between py-6 animate__animated animate__fadeInDown fixed w-full z-10 top-0 left-0 backdrop-blur-lg bg-gradient-to-r ">
         {/* Logo */}
         <div className="text-2xl font-bold cursor-pointer ml-3">
           <NavLink to="/my-portfolio/">

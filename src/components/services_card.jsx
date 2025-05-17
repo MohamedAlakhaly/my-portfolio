@@ -1,22 +1,59 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+"use client"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-export default function ServicesCard({ cardIcon, cardTitle, cardContent }) {
+export default function ServicesCard({
+  cardIcon,
+  cardTitle,
+  cardContent,
+  color,
+  bgLight,
+  border,
+  isActive,
+  onMouseEnter,
+  onMouseLeave,
+  id,
+}) {
   return (
-    <div className="border bg-dark border-gray-600 p-4 rounded-xl h-60 overflow-hidden hover:border-primary hover:shadow-3xl hover:shadow-primary group duration-200 transform hover:scale-105">
-      <div className="flex justify-between items-center group-hover:text-primary duration-200">
-        <FontAwesomeIcon icon={cardIcon} className="text-3xl" />
-        <div className="bg-white group-hover:bg-primary duration-200 text-black rounded-full hover:rotate-45 w-12 h-12 flex items-center justify-center">
-          <FontAwesomeIcon icon={faArrowRight} />
+    <div
+      className={`relative rounded-xl transition-all duration-500 group ${isActive ? "scale-[1.02]" : ""}`}
+      onMouseEnter={() => onMouseEnter(id)}
+      onMouseLeave={() => onMouseLeave()}
+    >
+      {/* Card Background with gradient border */}
+      <div
+        className={`absolute inset-0 rounded-xl bg-gradient-to-br ${color} opacity-0 group-hover:opacity-100 blur transition-opacity duration-300`}
+      ></div>
+
+      <div
+        className={`relative bg-zinc-800/80 backdrop-blur-sm border ${border} rounded-xl p-8 h-full flex flex-col transition-all duration-300 group-hover:shadow-xl`}
+      >
+        {/* Icon */}
+        <div
+          className={`${bgLight} w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+        >
+          <FontAwesomeIcon
+            icon={cardIcon}
+            className={`text-2xl bg-gradient-to-br ${color}  bg-clip-text`}
+          />
+        </div>
+
+        {/* Content */}
+        <h3 className={`text-2xl font-bold mb-4 bg-gradient-to-br ${color} text-transparent bg-clip-text`}>
+          {cardTitle}
+        </h3>
+
+        <p className="text-gray-300 leading-relaxed flex-grow">{cardContent}</p>
+
+        {/* Learn More Link */}
+        <div className="mt-6 flex justify-between items-center">
+          <div className="text-sm text-gray-400">{/* You could add tags or additional info here */}</div>
+          <button
+            className={`bg-gradient-to-r ${color} text-white px-4 py-2 rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0`}
+          >
+            Learn More
+          </button>
         </div>
       </div>
-      <h1 className="capitalize text-3xl font-bold py-3 group-hover:text-primary duration-200">
-        {cardTitle}
-      </h1>
-      <p className="text-gray-300">
-        {cardContent}
-      </p>
     </div>
-  );
+  )
 }

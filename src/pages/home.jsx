@@ -53,30 +53,6 @@ export default function Home() {
             of programming.
           </p>
 
-          {/* <p className="text-lg font-thin text-gray-300 animate__animated animate__fadeInLeft description">
-            I transform ideas into high-performance digital solutions.
-            Specializing in:
-            <br />- Building responsive web apps with **React**
-            <br />- Developing cross-platform mobile apps using **Flutter**
-            <br />- Crafting robust backend systems with **Node.js** Committed
-            to clean code architecture and exceptional user experiences.
-            Currently exploring AI integration in web technologies.
-          </p> */}
-
-          {/* <p className="text-lg font-thin text-gray-300 animate__animated animate__fadeInLeft description">
-            I am a passionate programmer specializing in building
-            high-performance digital solutions. My expertise includes:
-            <br />
-            <span className="font-medium">- Developing responsive web applications with **React**</span>
-            <br />
-            <span className="font-medium">- Creating cross-platform mobile apps using **Flutter**</span>
-            <br />
-            <span className="font-medium">- Designing scalable backend systems with **Node.js** </span>
-            <br />
-            Committed to clean code architecture and exceptional user
-            experiences. Constantly exploring cutting-edge technologies like AI
-            integration.
-          </p> */}
 
           {/* //? social media buttons */}
           <div className="py-7 flex animate__animated animate__fadeInUp">

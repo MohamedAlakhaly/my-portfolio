@@ -95,7 +95,7 @@ export default function ProjectsDetails() {
       <Navbar />
 
       {/* details section */}
-      <div className="flex flex-wrap pt-52">
+      <div className="flex flex-wrap lg:pt-52 pt-24">
         <div className="w-full lg:w-1/2 p-5">
           <br />
           <div className="text-3xl font-semibold animate__animated animate__fadeInDown">
