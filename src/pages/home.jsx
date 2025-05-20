@@ -36,7 +36,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="min-h-screen container mx-auto relative overflow-x-hidden">
+    <div className="min-h-screen  relative overflow-x-hidden">
       {/* Background elements */}
       <div className="absolute top-40 -left-64 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-30 animate-pulse" />
       <div className="absolute bottom-20 -right-64 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-30 animate-pulse" />
@@ -143,20 +143,20 @@ export default function Home() {
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <div className="relative inline-block group">
+            <div className="relative inline-block group mr-2">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-cyan-300 rounded-full blur opacity-0 group-hover:opacity-60 transition duration-300"></div>
-              <button className="px-6 py-3 bg-primary inline-flex items-center gap-3 text-black font-semibold rounded-full hover:bg-black hover:text-primary hover:outline outline-1 transition-all duration-300 cursor-pointer relative hover:shadow-lg hover:shadow-primary/30">
+              <a href="/my-portfolio/cv/CV Mohamed .pdf" className="px-6 py-3 bg-primary inline-flex items-center gap-3 text-black font-semibold rounded-full hover:bg-black hover:text-primary hover:outline outline-1 transition-all duration-300 cursor-pointer relative hover:shadow-lg hover:shadow-primary/30">
                 Download CV
                 <FontAwesomeIcon icon={faDownload} className="h-4 w-4" />
-              </button>
+              </a>
             </div>
 
             <a
               href="/my-portfolio/projects"
-              className="ml-4 px-6 py-3 bg-zinc-800/80 inline-flex items-center gap-2 text-white font-medium rounded-full hover:bg-zinc-700 transition-all duration-300 cursor-pointer relative hover:shadow-lg hover:shadow-black/30"
+              className="md:ml-4 mt-1 group md:mt-0 px-6 py-3 bg-zinc-800/80 inline-flex items-center gap-2 text-white font-medium rounded-full hover:bg-zinc-700 transition-all duration-300 cursor-pointer relative hover:shadow-lg hover:shadow-black/30"
             >
               View Projects
-              <FontAwesomeIcon icon={faArrowRight} className="h-4 w-4" />
+              <FontAwesomeIcon icon={faArrowRight} className="h-4 w-4 group-hover:translate-x-1 duration-200" />
             </a>
           </div>
         </div>

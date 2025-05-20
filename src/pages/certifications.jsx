@@ -136,18 +136,20 @@ export default function Certifications() {
       {/* EDIT: Enhanced header section with better styling */}
       <div className="pt-24 px-5">
         <div className="text-center mb-10">
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-transparent mx-auto mb-4"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-transparent mx-auto mb-4 animate__animated animate__fadeInLeft"></div>
           <div className="text-transparent bg-clip-text bg-gradient-to-r from-primary from-50% to-white to-60% lg:text-4xl text-3xl font-bold animate__animated animate__fadeInDown">
             My <span>Certifications</span>
           </div>
-          <p className="text-gray-400 mt-3 max-w-2xl mx-auto">
+          <div className="w-48 h-1 bg-gradient-to-l from-primary to-transparent mx-auto mt-4 animate__animated animate__fadeInRight"></div>
+
+          <p className="text-gray-400 mt-3 max-w-2xl mx-auto animate__animated animate__fadeInUp">
             Professional certifications that validate my skills and expertise in various technologies
           </p>
         </div>
 
         {/* EDIT: Added view mode toggle and category filters */}
-        <div className="flex flex-wrap justify-between items-center mb-6">
-          <div className="flex space-x-2 mb-4 md:mb-0">
+        <div className="flex flex-wrap justify-between items-center mb-6 ">
+          <div className="flex space-x-2 mb-4 md:mb-0 animate__animated animate__fadeInLeft">
             <button
               onClick={() => setViewMode("grid")}
               className={`px-4 py-2 rounded-md transition-all ${
@@ -166,7 +168,7 @@ export default function Certifications() {
             </button>
           </div>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 animate__animated animate__fadeInRight">
             {categories.map((category) => (
               <button
                 key={category}

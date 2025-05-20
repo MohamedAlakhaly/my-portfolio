@@ -74,7 +74,7 @@ export default function Projects() {
 
         if (isVisible && !animatedItems.includes(element.id)) {
           setAnimatedItems((prev) => [...prev, element.id])
-          element.classList.add("animate__fadeInUp")
+          element.classList.add("s")
         }
       })
     }
@@ -86,7 +86,7 @@ export default function Projects() {
   }, [animatedItems])
 
   return (
-    <div className="min-h-screen container mx-auto relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-40 -left-64 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-30 animate-pulse" />
       <div className="absolute bottom-20 -right-64 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-30 animate-pulse" />
@@ -99,18 +99,18 @@ export default function Projects() {
       {/* Header Section */}
       <div className="pt-28 pb-16 text-center relative">
         <div className="inline-block">
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-transparent mx-auto mb-4"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-transparent mx-auto mb-4 animate__animated animate__fadeInLeft"></div>
           <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-primary from-30% to-white to-70% lg:text-5xl text-4xl font-bold animate__animated animate__fadeInDown">
             My Projects
           </h1>
-          <div className="w-full h-1 bg-gradient-to-l from-primary to-transparent mx-auto mt-4"></div>
+          <div className="w-full h-1 bg-gradient-to-l from-primary to-transparent mx-auto mt-4 animate__animated animate__fadeInRight"></div>
         </div>
-        <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-lg">
+        <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-lg animate__animated animate__fadeInUp">
           A showcase of my recent work and creative projects across web and mobile platforms
         </p>
 
         {/* Category filters */}
-        <div className="flex flex-wrap justify-center gap-3 mt-8">
+        <div className="flex flex-wrap justify-center gap-3 mt-8 animate__animated animate__fadeInDown">
           {categories.map((category) => (
             <button
               key={category}
@@ -145,7 +145,7 @@ export default function Projects() {
       </div>
 
       {/* Call to Action Section */}
-      <div className="relative mx-4 mb-20">
+      <div className="relative mx-4 mb-20 animate__animated animate__fadeInUp">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-xl blur-md"></div>
         <div className="relative bg-zinc-800/80 backdrop-blur-sm border border-primary/20 rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between">
           <div className="mb-6 md:mb-0 md:mr-8">

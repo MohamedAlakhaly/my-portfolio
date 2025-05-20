@@ -91,7 +91,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="min-h-screen container mx-auto relative overflow-hidden">
+    <div className="min-h-screen  relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-40 -left-64 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-30 animate-pulse" />
       <div className="absolute bottom-20 -right-64 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-30 animate-pulse" />
@@ -105,13 +105,13 @@ export default function Contact() {
       {/* Header Section */}
       <div className="pt-28 pb-12 text-center relative">
         <div className="inline-block">
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-transparent mx-auto mb-4"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-transparent mx-auto mb-4 animate__animated animate__fadeInLeft"></div>
           <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-primary from-30% to-white to-70% lg:text-5xl text-4xl font-bold animate__animated animate__fadeInDown">
             Get In Touch
           </h1>
-          <div className="w-full h-1 bg-gradient-to-l from-primary to-transparent mx-auto mt-4"></div>
+          <div className="w-full h-1 bg-gradient-to-l from-primary to-transparent mx-auto mt-4 animate__animated animate__fadeInRight"></div>
         </div>
-        <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-lg">
+        <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-lg animate__animated animate__fadeInUp">
           Have a project in mind or want to discuss a potential collaboration? I'd love to hear from you!
         </p>
       </div>
@@ -295,7 +295,7 @@ export default function Contact() {
               </div>
 
               {/* Social Media Links */}
-              <div className="mt-10">
+              <div className="mt-10 animate__animated animate__fadeInUp">
                 <h3 className="text-sm font-medium text-gray-400 mb-4">CONNECT WITH ME</h3>
                 <div className="flex space-x-4">
                   <a
