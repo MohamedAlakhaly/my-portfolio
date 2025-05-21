@@ -9,6 +9,7 @@ import MyPortfolioProject from "../assets/my_projects/my_portfolio/1.png"
 import PortfolioProject from "../assets/my_projects/portfolio/1.png"
 import BonveroProject from "../assets/my_projects/Bonvero/Blue_Modern_Mobile_Application_Presentation.png"
 import netWoProject from "../assets/my_projects/coffee_shop/netWo.png"
+import uiPortfolioProject from "../assets/my_projects/ui_portfolio/ui_portfolio.png"
 
 export default function Projects() {
   const [filter, setFilter] = useState("All")
@@ -60,6 +61,14 @@ export default function Projects() {
       title: "NetWo",
       image: netWoProject,
       hoverColor: "from-orange-500",
+      cardAnimation: "animate__animated animate__fadeInUp",
+      category: "Web App",
+    },
+    {
+      id: "7",
+      title: "UI Portfolio",
+      image: uiPortfolioProject,
+      hoverColor: "from-purple-500",
       cardAnimation: "animate__animated animate__fadeInUp",
       category: "Web App",
     },

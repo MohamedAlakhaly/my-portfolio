@@ -16,6 +16,7 @@ import MyPortfolioImg1 from "../assets/my_projects/my_portfolio/1.png"
 import PortfolioImg from "../assets/my_projects/portfolio/1.png"
 import BonveroImg from "../assets/my_projects/Bonvero/Blue_Modern_Mobile_Application_Presentation.png"
 import netWoImg from "../assets/my_projects/coffee_shop/netWo.png"
+import uiPortfolioImg from "../assets/my_projects/ui_portfolio/ui_portfolio.png"
 
 export default function ProjectsDetails() {
   const projectsData = [
@@ -93,7 +94,20 @@ export default function ProjectsDetails() {
       github: "https://github.com/MohamedAlakhaly",
       liveDemo: "https://coffee-shop-chi-orpin.vercel.app/",
       images: [netWoImg],
-      category: "Mobile App",
+      category: "Web App",
+      year: "2025",
+      client: "Personal Project",
+    },
+    {
+      id: "7",
+      title: "UI portfolio",
+      description:
+        "This is a UI portfolio, likely built as a demo or portfolio project. It includes:\n\n✔ A clean, visually appealing design with coffee-themed colors (browns, beige, etc.).\n\n ✔  Smooth animations and hover effects for better user experience.\n✔  A responsive layout (works on mobile & desktop).",
+      technologies: ["Next js", "Tailwind css"],
+      github: "https://github.com/MohamedAlakhaly",
+      liveDemo: "https://ui-portfolio-mu.vercel.app/",
+      images: [uiPortfolioImg],
+      category: "Web App",
       year: "2025",
       client: "Personal Project",
     },
