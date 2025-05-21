@@ -8,6 +8,7 @@ import LiveStreamProject from "../assets/my_projects/live_stream/1.png"
 import MyPortfolioProject from "../assets/my_projects/my_portfolio/1.png"
 import PortfolioProject from "../assets/my_projects/portfolio/1.png"
 import BonveroProject from "../assets/my_projects/Bonvero/Blue_Modern_Mobile_Application_Presentation.png"
+import netWoProject from "../assets/my_projects/coffee_shop/netWo.png"
 
 export default function Projects() {
   const [filter, setFilter] = useState("All")
@@ -49,10 +50,18 @@ export default function Projects() {
     {
       id: "5",
       title: "Bonvero",
-      image: BonveroProject,
+      image:  BonveroProject,
       hoverColor: "from-green-500",
       cardAnimation: "animate__animated animate__fadeInUp",
       category: "Mobile App",
+    },
+    {
+      id: "6",
+      title: "NetWo",
+      image: netWoProject,
+      hoverColor: "from-orange-500",
+      cardAnimation: "animate__animated animate__fadeInUp",
+      category: "Web App",
     },
   ]
 

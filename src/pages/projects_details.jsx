@@ -15,6 +15,7 @@ import LiveStreamImg1 from "../assets/my_projects/live_stream/1.png"
 import MyPortfolioImg1 from "../assets/my_projects/my_portfolio/1.png"
 import PortfolioImg from "../assets/my_projects/portfolio/1.png"
 import BonveroImg from "../assets/my_projects/Bonvero/Blue_Modern_Mobile_Application_Presentation.png"
+import netWoImg from "../assets/my_projects/coffee_shop/netWo.png"
 
 export default function ProjectsDetails() {
   const projectsData = [
@@ -81,6 +82,19 @@ export default function ProjectsDetails() {
       images: [BonveroImg],
       category: "Mobile App",
       year: "2023",
+      client: "Personal Project",
+    },
+    {
+      id: "6",
+      title: "NetWo Coffee",
+      description:
+        "This is a modern coffee shop landing page, likely built as a demo or portfolio project. It includes:\n\n✔ A clean, visually appealing design with coffee-themed colors (browns, beige, etc.).\n\n ✔  Smooth animations and hover effects for better user experience.\n✔  A responsive layout (works on mobile & desktop).",
+      technologies: ["Next js", "Tailwind css"],
+      github: "https://github.com/MohamedAlakhaly",
+      liveDemo: "https://coffee-shop-chi-orpin.vercel.app/",
+      images: [netWoImg],
+      category: "Mobile App",
+      year: "2025",
       client: "Personal Project",
     },
   ]
