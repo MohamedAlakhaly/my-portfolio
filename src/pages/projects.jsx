@@ -10,6 +10,7 @@ import PortfolioProject from "../assets/my_projects/portfolio/1.png"
 import BonveroProject from "../assets/my_projects/Bonvero/Blue_Modern_Mobile_Application_Presentation.png"
 import netWoProject from "../assets/my_projects/coffee_shop/netWo.png"
 import uiPortfolioProject from "../assets/my_projects/ui_portfolio/ui_portfolio.png"
+import weatherPro from "../assets/my_projects/weather_pro/weather_pro.png"
 
 export default function Projects() {
   const [filter, setFilter] = useState("All")
@@ -72,6 +73,14 @@ export default function Projects() {
       cardAnimation: "animate__animated animate__fadeInUp",
       category: "Web App",
     },
+    {
+      id: "8",
+      title: "Weather Pro",
+      image: weatherPro,
+      hoverColor: "from-gray-600",
+      cardAnimation: "animate__animated animate__fadeInUp",
+      category: "Mobile App",
+    },
   ]
 
   // Extract unique categories
@@ -106,7 +115,7 @@ export default function Projects() {
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute top-40 -left-64 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-30 animate-pulse" />
+      <div className="absolute  top-40-left-64 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-30 animate-pulse" />
       <div className="absolute bottom-20 -right-64 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-30 animate-pulse" />
 
       {/* Background grid pattern */}

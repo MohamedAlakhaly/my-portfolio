@@ -17,6 +17,7 @@ import PortfolioImg from "../assets/my_projects/portfolio/1.png"
 import BonveroImg from "../assets/my_projects/Bonvero/Blue_Modern_Mobile_Application_Presentation.png"
 import netWoImg from "../assets/my_projects/coffee_shop/netWo.png"
 import uiPortfolioImg from "../assets/my_projects/ui_portfolio/ui_portfolio.png"
+import weatherProImg1 from "../assets/my_projects/weather_pro/weather_pro.png"
 
 export default function ProjectsDetails() {
   const projectsData = [
@@ -108,6 +109,19 @@ export default function ProjectsDetails() {
       liveDemo: "https://ui-portfolio-mu.vercel.app/",
       images: [uiPortfolioImg],
       category: "Web App",
+      year: "2025",
+      client: "Personal Project",
+    },
+    {
+      id: "8",
+      title: "Weather Pro",
+      description:
+        "This is a UI portfolio, likely built as a demo or portfolio project. It includes:\n\n✔ A clean, visually appealing design with coffee-themed colors (browns, beige, etc.).\n\n ✔  Smooth animations and hover effects for better user experience.\n✔  A responsive layout (works on mobile & desktop).",
+      technologies: ["Flutter", "GetX","Open weather API"],
+      github: "https://github.com/MohamedAlakhaly",
+      liveDemo: "",
+      images: [weatherProImg1],
+      category: "Mobile App",
       year: "2025",
       client: "Personal Project",
     },
