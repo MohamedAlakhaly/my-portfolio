@@ -13,13 +13,13 @@ createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <ScrollToTop />
     <Routes>
-      <Route path="/my-portfolio/" element={<Home />} />
-      <Route path="/my-portfolio/services" element={<Services />} />
-      <Route path="/my-portfolio/about" element={<About />} />
-      <Route path="/my-portfolio/certifications" element={<Certifications />} />
-      <Route path="/my-portfolio/projects" element={<Projects />} />
-      <Route path="/my-portfolio/projects/:id" element={<ProjectsDetails />} />
-      <Route path="/my-portfolio/contact" element={<Contact />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/certifications" element={<Certifications />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/projects/:id" element={<ProjectsDetails />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   </BrowserRouter>
 );
