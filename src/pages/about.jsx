@@ -1,5 +1,5 @@
 import Navbar from "../components/navbar"
-import img1 from "../assets/Clipped_image_20241201_070236.png"
+import img1 from "../assets/1780263431513.png"
 import SkillsCard from "../components/skills_card"
 import { useState } from "react"
 
