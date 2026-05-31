@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import Navbar from "../components/navbar"
-import img1 from "../assets/Clipped_image_20241201_070236.png"
+import img1 from "../assets/1780263431513.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Typed from "typed.js"
 import { faLinkedin, faGithub, faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons"
