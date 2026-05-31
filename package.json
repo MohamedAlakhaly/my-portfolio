@@ -6,8 +6,8 @@
   "homepage": "https://mohamedalakhaly.github.io/my-portfolio/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+  "build": "npx --yes vite build",
+  "preview": "vite preview"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.1",
