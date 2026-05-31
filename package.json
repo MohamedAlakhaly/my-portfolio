@@ -5,10 +5,10 @@
   "type": "module",
   "homepage": "https://mohamedalakhaly.github.io/my-portfolio/",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build": "node node_modules/vite/bin/vite.js build",
+  "dev": "node node_modules/vite/bin/vite.js",
+  "preview": "node node_modules/vite/bin/vite.js preview"
+    
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.1",
@@ -16,6 +16,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.7.1",
     "@fortawesome/free-solid-svg-icons": "^6.7.1",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@splinetool/react-spline": "^4.1.0",
     "animate.css": "^4.1.1",
     "my_portfolio": "file:",
     "react": "^18.3.1",
