@@ -118,6 +118,8 @@ export default function About() {
         .corner-tl{top:0;left:0;} .corner-tr{top:0;right:0;}
         .corner-bl{bottom:0;left:0;} .corner-br{bottom:0;right:0;}
 
+        @media(max-width:768px){
+        .profile-card { width: 100% !important; }}
         /* ── labels & titles ── */
         .sl{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:${NEON};margin-bottom:.75rem;display:flex;align-items:center;gap:8px;}
         .sl::before{content:'';display:inline-block;width:28px;height:1px;background:${NEON};}
