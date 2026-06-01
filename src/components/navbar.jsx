@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 const NEON = "#39ff14";
