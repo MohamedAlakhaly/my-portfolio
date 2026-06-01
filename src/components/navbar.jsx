@@ -150,7 +150,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        // desktop
+        
         <Link to="/contact" className="nav-cta desktop-nav">
           Hire me →
         </Link>
