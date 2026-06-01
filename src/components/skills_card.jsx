@@ -35,7 +35,7 @@ export default function SkillsCard({ skills, skillsLogo }) {
         .skill-name {
           font-family: 'JetBrains Mono', monospace;
           font-size: 10px; letter-spacing: .08em; text-transform: uppercase;
-          color: #333; transition: color .25s; text-align: center;
+          color: #666; transition: color .25s; text-align: center;
         }
       `}</style>
 

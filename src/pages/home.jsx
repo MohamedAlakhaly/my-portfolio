@@ -200,14 +200,14 @@ export default function Home() {
           {/* top label */}
           <div
             className={`transition-all duration-500 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"}`}
-            style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#555", letterSpacing: "0.15em" }}
+            style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#888", letterSpacing: "0.15em" }}
           >
             <span style={{ color: NEON }}>▸</span> &nbsp;PORTFOLIO_2025.exe
           </div>
 
           {/* name */}
           <div className={`transition-all duration-600 delay-100 ${isLoaded ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
-            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, color: "#444", marginBottom: 8 }}>
+            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, color: "#888", marginBottom: 8 }}>
               // Hello, World! I am
             </p>
             <h1 style={{ fontSize: "clamp(2.6rem, 6vw, 4.2rem)", fontWeight: 800, lineHeight: 1.05, letterSpacing: "-0.02em", color: "#fff" }}>
@@ -232,7 +232,7 @@ export default function Home() {
           {/* bio */}
           <p
             className={`transition-all duration-600 delay-300 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
-            style={{ fontSize: "0.95rem", color: "#555", lineHeight: 1.85, maxWidth: 480 }}
+            style={{ fontSize: "0.95rem", color: "#aaa ", lineHeight: 1.85, maxWidth: 480 }}
           >
             I build fast, scalable, and beautiful digital products — from web platforms to mobile apps.
             Turning complex problems into clean, impactful solutions is what I do best.
@@ -254,7 +254,7 @@ export default function Home() {
             {stats.map(({ value, label }) => (
               <div key={label}>
                 <p style={{ fontSize: "1.8rem", fontWeight: 800, color: NEON, lineHeight: 1, textShadow: `0 0 12px ${NEON}77` }}>{value}</p>
-                <p style={{ fontSize: "0.7rem", color: "#444", marginTop: 3, fontFamily: "'JetBrains Mono', monospace", letterSpacing: "0.05em" }}>{label}</p>
+                <p style={{ fontSize: "0.7rem", color: "#888", marginTop: 3, fontFamily: "'JetBrains Mono', monospace", letterSpacing: "0.05em" }}>{label}</p>
               </div>
             ))}
           </div>

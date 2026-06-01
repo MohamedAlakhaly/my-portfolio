@@ -62,7 +62,7 @@ export default function Navbar() {
         .nav-link {
           position: relative; padding: 6px 14px; border-radius: 6px;
           font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
-          color: #555; text-decoration: none; transition: all 0.25s;
+          color: #777; text-decoration: none; transition: all 0.25s;
         }
         .nav-link::before {
           content: ''; position: absolute; inset: 0;
@@ -108,7 +108,7 @@ export default function Navbar() {
         .mobile-link {
           display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 8px;
           font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
-          color: #555; text-decoration: none; border: 1px solid transparent; transition: all 0.2s;
+          color: #777; text-decoration: none; border: 1px solid transparent; transition: all 0.2s;
           font-family: 'JetBrains Mono', monospace;
         }
         .mobile-link:hover { color: ${NEON}; background: ${NEON}0d; border-color: ${NEON}22; }
