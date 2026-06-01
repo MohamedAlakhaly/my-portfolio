@@ -1,9 +1,9 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
-import { NavLink } from "react-router-dom"
-import { useState, useEffect } from "react"
-
-const NEON = "#39ff14"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { NavLink, Link } from "react-router-dom";
+const NEON = "#39ff14";
 
 const links = [
   { to: "/", label: "home", end: true },
@@ -11,20 +11,21 @@ const links = [
   { to: "/about", label: "about" },
   { to: "/certifications", label: "certs" },
   { to: "/projects", label: "projects" },
-  { to: "/contact", label: "contact" },
-]
+  { to: "/contact", label: "contact" }
+];
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener("scroll", onScroll)
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-  const linkStyle = ({ isActive }) => isActive ? "active-link nav-link" : "nav-link"
+  const linkStyle = ({ isActive }) =>
+    isActive ? "active-link nav-link" : "nav-link";
 
   return (
     <>
@@ -129,14 +130,12 @@ export default function Navbar() {
       `}</style>
 
       <nav className={`navbar ${scrolled ? "scrolled" : "top"}`}>
-
         <NavLink to="/" className="logo">
           <span className="logo-bracket">[</span>
           <span>Mohamed</span>
           <span className="logo-accent">.</span>
           <span className="logo-bracket">]</span>
         </NavLink>
-
         <ul className="nav-links desktop-nav">
           {links.map(({ to, label, end }, i) => (
             <li key={to}>
@@ -152,11 +151,19 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-
-        <a href="/contact" className="nav-cta desktop-nav">Hire me →</a>
-
-        <button className="hamburger" onClick={() => setOpen(!open)} aria-label="menu">
-          <FontAwesomeIcon icon={open ? faXmark : faBars} style={{ fontSize: 16 }} />
+        // desktop
+        <Link to="/contact" className="nav-cta desktop-nav">
+          Hire me →
+        </Link>
+        <button
+          className="hamburger"
+          onClick={() => setOpen(!open)}
+          aria-label="menu"
+        >
+          <FontAwesomeIcon
+            icon={open ? faXmark : faBars}
+            style={{ fontSize: 16 }}
+          />
         </button>
       </nav>
 
@@ -165,19 +172,36 @@ export default function Navbar() {
           {links.map(({ to, label, end }, i) => (
             <li key={to}>
               <NavLink
-                to={to} end={end}
-                className={({ isActive }) => `mobile-link${isActive ? " active-link" : ""}`}
+                to={to}
+                end={end}
+                className={({ isActive }) =>
+                  `mobile-link${isActive ? " active-link" : ""}`
+                }
                 onClick={() => setOpen(false)}
               >
-                <span style={{ color: "#39ff1444", fontSize: 10, fontFamily: "monospace" }}>0{i + 1}</span>
+                <span
+                  style={{
+                    color: "#39ff1444",
+                    fontSize: 10,
+                    fontFamily: "monospace"
+                  }}
+                >
+                  0{i + 1}
+                </span>
                 {label}
               </NavLink>
             </li>
           ))}
         </ul>
         <div className="mobile-divider" />
-        <a href="/contact" className="mobile-cta" onClick={() => setOpen(false)}>Hire me →</a>
+        <Link
+          to="/contact"
+          className="mobile-cta"
+          onClick={() => setOpen(false)}
+        >
+          Hire me →
+        </Link>
       </div>
     </>
-  )
+  );
 }
